@@ -1,0 +1,23 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-2.3
+; Author: Professor Krasso
+; Date:   January 9 2021
+; Modified By: Rhiannon Kimberlin
+; Description: Enhanced-profile-app
+;===========================================
+-->
+
+<!--Detail List-->
+<ul class="list-group">
+    <li class="list-item-name">Name: {{ myProfile.fullName }}</li>
+    <li class="list-item-food">Favorite Food: {{ myProfile.favoriteFood }}</li>
+    <li class="list-item-color">Favorite Color: {{ myProfile.favoriteColor }}</li>
+    <li class="list-group-item">
+        Keywords:
+        <span *ngFor="let word of myProfile.keywords">
+            {{ word }}
+
+        </span>
+    </li>
+</ul>
