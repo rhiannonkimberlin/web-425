@@ -1,0 +1,33 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-3.3
+; Author: Professor Krasso
+; Date:   January 19 2021
+; Modified By: Rhiannon Kimberlin
+; Description: secure-profile-app
+;===========================================
+-->
+
+<div class="card signin-container">
+    
+    <div class="card-body">
+        <h3 class="card-title">Sign in</h3>
+
+        <form class="card-text">
+            <!--Form Input for Username-->
+            <div class="form-group">
+                <label for="txtUserName">Username</label>
+                <input type="text" class="form-control" id="txtUserName" placeholder="Enter your Username." />
+            </div>
+            <!--Form Input for Password-->
+           <div class="form-group">
+               <label for="txtPassword">Password</label>
+               <input type="password" class="form-control" id="txtPassword" placeholder="Enter your password" />
+           </div> 
+           <!--Form Button to Submit-->
+           <div class="form-group">
+               <button class="btn btn-primary float-right" (click)="signIn()">Submit</button>
+           </div>
+        </form>
+    </div>
+</div>

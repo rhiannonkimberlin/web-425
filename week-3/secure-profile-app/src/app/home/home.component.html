@@ -1,0 +1,52 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-3.3
+; Author: Professor Krasso
+; Date:   January 19 2021
+; Modified By: Rhiannon Kimberlin
+; Description: secure-profile-app
+;===========================================
+-->
+
+<!--Bootstrap navBar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <br /><br />
+    <!--Assignment Title-->
+    <h2>Assignment 3.3 - Passing Data to Routes Part 2!</h2>
+    <br />
+    <div class="row" *ngIf="isLoggedIn; else showError">
+      <!--Image Import -->
+      <div class="col-sm-6">
+        <app-my-image></app-my-image>
+      </div>
+  
+      <!--Profile Details -->
+      <div class="col-sm-5">
+        <app-my-details></app-my-details>
+      </div>
+    </div>
+    <!--If Boolean Set to False, this will appear-->
+    <ng-template #showError>
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="alert alert-danger"> 
+            You are not Authorized to view this content.
+          </h4>
+        </div>
+      </div>
+    </ng-template>
+  </div>
