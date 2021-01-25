@@ -31,7 +31,7 @@ export class ComposerListComponent implements OnInit {
   constructor(private ComposerService: ComposerService) {
     //Dependency Injection (DI)
     this.composers = this.ComposerService.getComposers();
-//txtSearchControl looks at what is in the search bar in composer-list.html.
+  //txtSearchControl looks at what is in the search bar in composer-list.html.
     //debounce slows down the number of times filterComposer function is called
     this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
   }

@@ -25,13 +25,13 @@ import { Observable } from 'rxjs';
 
 export class ComposerListComponent implements OnInit {
   //Composers updated to observable from rxjs
-  composers: Observable<IComposer>;
+  composers: Observable<IComposer[]>;
   //Provides Form control for txtSearchControl
   txtSearchControl = new FormControl('');
 
-  constructor(private ComposerService: ComposerService) {
+  constructor(private composerService: ComposerService) {
     //Dependency Injection (DI) from angular
-    this.composers = this.ComposerService.getComposers();
+    this.composers = this.composerService.getComposers();
     //txtSearchControl looks at what is in the search bar in composer-list.html.
     //debounce slows down the number of times filterComposer function is called
     this.txtSearchControl.valueChanges.pipe(debounceTime(500)).subscribe(val => this.filterComposers(val));
@@ -41,7 +41,7 @@ export class ComposerListComponent implements OnInit {
   }
 
 filterComposers(name: string){
-  alert(name);
+  this.composers = this.composerService.filterComposer(name);
 }
 
 }
