@@ -1,0 +1,23 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-4.4
+; Author: Professor Krasso
+; Date:   January 25 2021
+; Modified By: Rhiannon Kimberlin
+; Description: enterprise-composer-app
+;===========================================
+-->
+
+<br /><br />
+<div class="row">
+    <div class="col-sm-12">
+        <ul class="list-group">
+            <!-- Data from composer.class.ts and binded-->
+            <li class="list-group-item">Composer ID: {{ composer.composerId }} </li>
+            <li class="list-group-item">Composer Name: {{ composer.fullName }} </li>
+            <li class="list-group-item">Genre: {{ composer.genre }} </li>
+        </ul>
+        <br />
+        <a routerLink="/composer-list" class="float-right">Return to Composers</a>
+    </div>
+</div>
