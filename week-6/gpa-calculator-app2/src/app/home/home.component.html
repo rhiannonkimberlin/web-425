@@ -15,12 +15,13 @@ Our “home” page will consist of three parts
  a gpa section (gpa component)
 -->
 
+<!--Form for Grade Entry on right-->
 <div fxLayout="row wrap" fxLayoutGap="20px">
     <div class="grade-form" fxFlex>
       <mat-card class="mat-elevation-z8">
   
         <mat-card-title>Grade Entry</mat-card-title>
-  
+        <!--Input on form for Course information on righ-->
         <mat-card-content>
           <form fxLayout="column" fxLayoutGap="16px">
             <mat-form-field fxFlex appearance="fill">
@@ -28,6 +29,7 @@ Our “home” page will consist of three parts
               <input type="text" name="txtCourse" id="txtCourse" matInput [(ngModel)]="transcriptEntry.course" />
             </mat-form-field>
   
+            <!--Grade entry on form-->
             <mat-form-field fxFlex appearance="fill">
               <mat-label>Grade</mat-label>
               <mat-select [(ngModel)]="transcriptEntry.grade" name="selectGrade">
@@ -55,7 +57,7 @@ Our “home” page will consist of three parts
   </div>
   
   <br /><br />
-  
+  <!--GPA information-->
   <div fxLayout="column" fxLayoutGap="20px">
     <div fxFlex class="gpa">
       <button mat-button color="primary" (click)="calculateResults()">Calculate GPA</button>
