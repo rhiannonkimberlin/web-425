@@ -1,0 +1,29 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-6.2
+; Author: Professor Krasso
+; Date:   February 7 2021
+; Modified By: Rhiannon Kimberlin
+; Description: in-n-out-booksp4
+;===========================================
+-->
+
+<!--Creating Form for Wishlist-->
+<form fxLayout="column" class="wishlist-create-form">
+
+    <!--NgModel used to capture items added to wishlist-->
+    <mat-form-field fxFlex appearance="fill">
+        <!--Title Information in Form-->
+        <mat-label>Title</mat-label>
+        <input type="text" name="title" matInput [(ngModel)]="item.title" />
+    </mat-form-field>
+
+    <mat-form-field fxFlex appearance="fill">
+        <!--Author Information in Form-->
+        <mat-label>Authors</mat-label>
+        <input type="text" name="authors" matInput [(ngModel)]="item.authors" />
+    </mat-form-field>
+
+    <!--Button to add to wishlist-->
+    <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>

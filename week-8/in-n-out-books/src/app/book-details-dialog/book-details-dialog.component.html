@@ -1,0 +1,33 @@
+<!--
+    ============================================
+; Title:  kimberlin-assignment-6.2
+; Author: Professor Krasso
+; Date:   February 7 2021
+; Modified By: Rhiannon Kimberlin
+; Description: in-n-out-booksp4
+;===========================================
+-->
+
+<!--Dialog box-->
+<mat-card>
+    <!--Book Title is classed as blue-->
+    <mat-card-title class="blue">
+        {{ book.title }}
+    </mat-card-title>
+    <br /><br />
+
+    <!--Book Information (ISBN, Description, Author) will appear under title-->
+    <mat-card-content>
+        <div fxLayout="column" class="book-details">
+            <p><em>ISBN:</em><br /> {{ book.isbn }}</p>
+            <p><em>Description:</em><br /> {{ book.description }}</p>
+            <p><em>Authors:</em><br /> {{ book.authors.join(', ')}}</p>
+        </div>
+    </mat-card-content>
+
+    <!--Okay Button to close out dialog box-->
+    <mat-card-actions align="end">
+        <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+    </mat-card-actions>
+
+</mat-card>
